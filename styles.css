@@ -5,6 +5,13 @@ body {
     flex-wrap: wrap;
 }
 
+div {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .grid-item {
     box-sizing: border-box;
     width: 20px;
