@@ -1,9 +1,14 @@
 const body = document.querySelector('body');
+
 // create button that will send the user a popup asking for the number of squares per side for the new grid.
 const button = document.createElement('button');
 body.appendChild(button);
 button.textContent = 'Click here to set the size of your grid!';
 
+// add event listener to button that will prompt the user to input a number, which will define the grid dimensions.
+button.addEventListener('click', () => {
+    console.log('hey');
+});
 // create the grid
 document.addEventListener("DOMContentLoaded", function () {
     // Get the container element
