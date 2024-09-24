@@ -22,24 +22,21 @@ document.addEventListener("DOMContentLoaded", function () {
             gridContainer.appendChild(gridItem);
         };
     };
-});
-
-document.addEventListener("load", function {
-    const cells = document.querySelectorAll('.grid-item');
-
-    // write a function to change the background color to grey
-    function colorChange(element) {
-        element.setAttribute('background', 'grey')
-    };
+    document.addEventListener("load", function () {
+        // access each grid item in a node list
+        const cells = document.querySelectorAll('.grid-item');
     
-    // use for loop to access each cell individually
-    cells.forEach(() => {
-        cells.addEventListener('mouseover', colorChange());
+        // write a function to change the background color to grey
+        function colorChange(element) {
+            element.setAttribute('background', 'gray');
+        };
+        
+        // use for loop to add event listener on each cell individually & callback colorChange funcion
+        cells.forEach(cell => {
+            cell.addEventListener('mouseover', () => {
+                colorChange(cell);
+            })
+        });
     });
-    
-    
-    // add event listener to call back the colorChange function on mouseover
-    // cells.addEventListener('mouseover', colorChange());
 });
-// access each grid item in a node list
 
