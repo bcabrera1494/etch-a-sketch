@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const gridContainer = document.querySelector('#container');
     // gridContainer.setAttribute();
     body.appendChild(gridContainer);
+ 
 
     // Create a 16x16 grid
     const rows = 16;
@@ -22,34 +23,15 @@ document.addEventListener("DOMContentLoaded", function () {
             gridContainer.appendChild(gridItem);
         };
     };
-    document.addEventListener("load", function () {
-        // access each grid item in a node list
-        const cells = document.querySelectorAll('.grid-item');
-    
-        // write a function to change the background color to grey
-        function colorChange(element) {
-            element.setAttribute('background', 'gray');
-        };
-        
-        // use for loop to add event listener on each cell individually & callback colorChange funcion
-        cells.forEach(cell => {
-            cell.addEventListener('mouseover', () => {
-                colorChange(cell);
-            })
 });
 
 // below works to shade the entire div grey
     const container = document.querySelector('#container');
     container.addEventListener('mouseover', () => {
-        container.setAttribute('style', 'background: grey');
+        // access each grid item in a node list
+        const cells = document.querySelectorAll('.grid-item');
+        cells.forEach(cell => {
+        cell.addEventListener('mouseover',() => {
+        cell.setAttribute('style', 'background: gray')})
     });
-
-
-// document.addEventListener("load", function () {
-//     // access each grid item in a node list
-//     const cells = document.querySelectorAll('.grid-item');
-//     cells.forEach(cell => {
-//         cell.addEventListener('mouseover',() => {
-//         cell.setAttribute('style', 'background: gray')});
-//     })
-// });
+    });
