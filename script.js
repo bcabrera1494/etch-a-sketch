@@ -25,13 +25,18 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // access each grid item in a node list
-const cell = document.querySelectorAll('.grid-item');
+const cells = document.querySelectorAll('.grid-item');
 
 // write a function to change the background color to grey
-function colorChange() {
-    cell.forEach()// use for loop to access each cell individually
-    cell.setAttribute('background', 'grey')
+function colorChange(element) {
+    element.setAttribute('background', 'grey')
 };
 
+// use for loop to access each cell individually
+cells.forEach(() => {
+    cells.addEventListener('mouseover', colorChange());
+});
+
+
 // add event listener to call back the colorChange function on mouseover
-cell.addEventListener('mouseover', colorChange());
+// cells.addEventListener('mouseover', colorChange());
