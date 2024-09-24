@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
             // Append the grid item to the container div
             gridContainer.appendChild(gridItem);
             // Set the size of each grid item
-            // gridItem.setAttribute('style', 'height: 25px', 'width: 25px');
+            // gridItem.setAttribute.flex(1);
         };
     };
 });
