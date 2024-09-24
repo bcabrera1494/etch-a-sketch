@@ -14,6 +14,7 @@ function newGrid(x){
             const gridItem = document.createElement("div");
             gridItem.classList.add("grid-item");
             gridContainer.appendChild(gridItem);
+            ;
         };
     };
 };
@@ -21,7 +22,7 @@ function newGrid(x){
 // function to remove old grid
 function removeGrid (element){
     const gridContainer = document.querySelector('#container');
-    gridContainer.removeChild(element)
+    gridContainer.removeChild(element);
 };
 
 // add event listener to button that will prompt the user to input a number, which will define the grid dimensions.
@@ -53,11 +54,10 @@ document.addEventListener("DOMContentLoaded", function () {
         for (let j = 0; j < columns; j++) {
             const gridItem = document.createElement("div");
             gridItem.classList.add("grid-item");
-
-            // Set the position of each grid item
-
             // Append the grid item to the container div
             gridContainer.appendChild(gridItem);
+            // Set the size of each grid item
+            // gridItem.setAttribute('style', 'height: 25px', 'width: 25px');
         };
     };
 });
