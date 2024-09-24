@@ -1,4 +1,9 @@
 const body = document.querySelector('body');
+// create button that will send the user a popup asking for the number of squares per side for the new grid.
+const button = document.createElement('button');
+body.appendChild(button);
+button.textContent = 'Click here to set the size of your grid!';
+
 // create the grid
 document.addEventListener("DOMContentLoaded", function () {
     // Get the container element
@@ -25,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 });
 
-// below works to shade the entire div grey
+// below works to shade individual elements gray
     const container = document.querySelector('#container');
     container.addEventListener('mouseover', () => {
         // access each grid item in a node list
