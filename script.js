@@ -36,7 +36,20 @@ document.addEventListener("DOMContentLoaded", function () {
             cell.addEventListener('mouseover', () => {
                 colorChange(cell);
             })
-        });
-    });
 });
 
+// below works to shade the entire div grey
+    const container = document.querySelector('#container');
+    container.addEventListener('mouseover', () => {
+        container.setAttribute('style', 'background: grey');
+    });
+
+
+// document.addEventListener("load", function () {
+//     // access each grid item in a node list
+//     const cells = document.querySelectorAll('.grid-item');
+//     cells.forEach(cell => {
+//         cell.addEventListener('mouseover',() => {
+//         cell.setAttribute('style', 'background: gray')});
+//     })
+// });
