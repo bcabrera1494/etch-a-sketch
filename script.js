@@ -7,8 +7,24 @@ button.textContent = 'Click here to set the size of your grid!';
 
 // add event listener to button that will prompt the user to input a number, which will define the grid dimensions.
 button.addEventListener('click', () => {
-    console.log('hey');
+    let userInput = prompt('Enter the number of rows and columns for your grid');
+    userInput;
+
+    makeGrid(userInput);
 });
+// function to make grid
+    function makeGrid(x){
+        const gridContainer = document.querySelector('#container');
+        rows = x;
+        columns = x;
+        for (let r = 0; r < x; r++) {
+            for (let c = 0; c < x; c++) {
+                const gridItem = document.createElement("div");
+                gridItem.classList.add("grid-item");
+                gridContainer.appendChild(gridItem);
+            };
+        };
+    };
 // create the grid
 document.addEventListener("DOMContentLoaded", function () {
     // Get the container element
