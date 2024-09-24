@@ -1,5 +1,5 @@
 const body = document.querySelector('body');
-
+// create the grid
 document.addEventListener("DOMContentLoaded", function () {
     // Get the container element
     const gridContainer = document.querySelector('#container');
@@ -24,19 +24,22 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 });
 
-// access each grid item in a node list
-const cells = document.querySelectorAll('.grid-item');
+document.addEventListener("load", function {
+    const cells = document.querySelectorAll('.grid-item');
 
-// write a function to change the background color to grey
-function colorChange(element) {
-    element.setAttribute('background', 'grey')
-};
-
-// use for loop to access each cell individually
-cells.forEach(() => {
-    cells.addEventListener('mouseover', colorChange());
+    // write a function to change the background color to grey
+    function colorChange(element) {
+        element.setAttribute('background', 'grey')
+    };
+    
+    // use for loop to access each cell individually
+    cells.forEach(() => {
+        cells.addEventListener('mouseover', colorChange());
+    });
+    
+    
+    // add event listener to call back the colorChange function on mouseover
+    // cells.addEventListener('mouseover', colorChange());
 });
+// access each grid item in a node list
 
-
-// add event listener to call back the colorChange function on mouseover
-// cells.addEventListener('mouseover', colorChange());
