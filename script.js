@@ -1,9 +1,9 @@
 const body = document.querySelector('body');
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     // Get the container element
     const gridContainer = document.querySelector('#container');
-   // gridContainer.setAttribute();
+    // gridContainer.setAttribute();
     body.appendChild(gridContainer);
 
     // Create a 16x16 grid
@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Loop to create grid items and append them to the body
     for (let i = 0; i < rows; i++) {
-        for (var j = 0; j < columns; j++) {
+        for (let j = 0; j < columns; j++) {
             const gridItem = document.createElement("div");
             gridItem.classList.add("grid-item");
 
@@ -20,6 +20,18 @@ document.addEventListener("DOMContentLoaded", function() {
 
             // Append the grid item to the container div
             gridContainer.appendChild(gridItem);
-        }
-    }
+        };
+    };
 });
+
+// access each grid item in a node list
+const cell = document.querySelectorAll('.grid-item');
+
+// write a function to change the background color to grey
+function colorChange() {
+    cell.forEach()// use for loop to access each cell individually
+    cell.setAttribute('background', 'grey')
+};
+
+// add event listener to call back the colorChange function on mouseover
+cell.addEventListener('mouseover', colorChange());
