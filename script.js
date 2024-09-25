@@ -14,6 +14,7 @@ function newGrid(userInput){
         for (let c = 0; c < userInput; c++) {
             const gridItem = document.createElement("div");
             gridItem.classList.add("grid-item");
+            gridItem.style.flex = '1, 1, 0';
             gridContainer.appendChild(gridItem);
             ;
         };
