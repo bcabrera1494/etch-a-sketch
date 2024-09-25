@@ -7,8 +7,11 @@ body {
 }
 
 button {
-    padding: 10px;
-    margin: 10px;
+    padding: 20px;
+    margin: 50px;
+    background-color: chocolate;
+    border-color: black;
+    border-width: 3px;
 }
 
 div {
@@ -24,7 +27,7 @@ div {
 
 .grid-item {
     box-sizing: border-box;
-    width: auto;
-    height: auto;
+    width: 25px;
+    height: 25px;
     border: 1px solid #000;
 }
