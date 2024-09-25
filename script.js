@@ -5,6 +5,16 @@ const button = document.createElement('button');
 body.appendChild(button);
 button.textContent = 'Customize your grid!';
 
+// // function to size grid elements
+// function adjustGrid(){
+//     // call cells
+//     const cells = document.querySelector(".grid-item");
+//     // set flex attributes to cells
+//     cells.forEach((cell) => {
+//         cell.style.flex = 1, 1, 0;
+//     });
+// };
+
 // function to make grid
 function newGrid(userInput){
     // logic to remove original grid or prevent original grid from loading could go here
@@ -14,12 +24,12 @@ function newGrid(userInput){
         for (let c = 0; c < userInput; c++) {
             const gridItem = document.createElement("div");
             gridItem.classList.add("grid-item");
-            gridItem.style.flex = '1, 1, 0';
+            //Add flex properties to grid items so that they grow and shrink to fit the square
             gridContainer.appendChild(gridItem);
-            ;
         };
     };
 };
+
 
 // function to remove old grid
 function removeGrid (element){
@@ -37,6 +47,12 @@ button.addEventListener('click', () => {
     let userInput = prompt('Enter the number of rows and columns for your grid');
     userInput;
     newGrid(userInput);
+    const container = document.querySelector('#container');
+    container.setAttribute('style', 'height: max-content', 'width: max-content');
+    // set flex attributes to cells
+    cells.forEach((cell) => {
+        cell.setAttribute('style', 'height: max-content', 'width: max-content')
+    });
 });
 
 // create the original grid
