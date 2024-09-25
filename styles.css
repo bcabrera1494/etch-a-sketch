@@ -19,6 +19,7 @@ div {
     height: 400px;
     width: 400px;
     justify-items: stretch;
+    align-items: stretch;
 }
 
 .grid-item {
