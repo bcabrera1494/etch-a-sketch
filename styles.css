@@ -22,8 +22,7 @@ div {
     padding: 10px;
     display: flex;
     flex-wrap: wrap-reverse;
-    height: 400px;
-    width: 400px;
+    aspect-ratio: 1/1;
 }
 
 .grid-item {
