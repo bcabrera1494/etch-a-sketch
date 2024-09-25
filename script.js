@@ -6,11 +6,12 @@ body.appendChild(button);
 button.textContent = 'Customize your grid!';
 
 // function to make grid
-function newGrid(x){
+function newGrid(userInput){
     // logic to remove original grid or prevent original grid from loading could go here
     const gridContainer = document.querySelector('#container');
-    for (let r = 0; r < x; r++) {
-        for (let c = 0; c < x; c++) {
+
+    for (let r = 0; r < userInput; r++) {
+        for (let c = 0; c < userInput; c++) {
             const gridItem = document.createElement("div");
             gridItem.classList.add("grid-item");
             gridContainer.appendChild(gridItem);
