@@ -25,7 +25,8 @@ div {
     padding: 10px;
     display: flex;
     flex-wrap: wrap-reverse;
-    width: 960px;
+    width: 320px;
+    height: 320px;
 }
 
 .grid-item {
