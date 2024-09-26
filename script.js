@@ -45,13 +45,6 @@ button.addEventListener('click', () => {
     newGrid(userInput);
 });
 
-//     const container = document.querySelector('#container');
-//     container.setAttribute('style', 'height: max-content', 'width: max-content');
-//     // set flex attributes to cells
-//     cells.forEach((cell) => {
-//         cell.setAttribute('style', 'height: max-content', 'width: max-content')
-//     });
-// });
 
 // create the original grid
 document.addEventListener("DOMContentLoaded", function () {
@@ -83,12 +76,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 // // below works to shade individual elements gray
-//     const container = document.querySelector('#container');
-//     container.addEventListener('mouseover', () => {
-//         // access each grid item in a node list
-//         const cells = document.querySelectorAll('.grid-item');
-//         cells.forEach(cell => {
-//         cell.addEventListener('mouseover',() => {
-//         cell.setAttribute('style', 'background: gray')})
-//     });
-//     });
+const container = document.querySelector('#container');
+const rowContainer = document.querySelector('#row');
+
+container.addEventListener('mouseover', () => {
+    container.setAttribute('style', 'background: gray');
+});
