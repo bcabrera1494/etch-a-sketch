@@ -60,6 +60,18 @@ button.addEventListener('click', () => {
             };
         });
     });
+    // code to click back to white background
+    const container = document.querySelectorAll('#row');
+    container.forEach(row => {
+        row.addEventListener('click', (event => {
+            let target = event.target
+            if (target.id = 'cell') {
+                target.setAttribute('style', 'background: white');
+                target.setAttribute('style', 'border: solid 1px black');
+            };
+        }));
+
+    });
 });
 
 // create the original grid
