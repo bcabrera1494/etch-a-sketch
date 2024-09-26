@@ -22,10 +22,10 @@ const body = document.querySelector('body');
 
 
 // // function to remove old grid
-// function removeGrid (element){
-//     const gridContainer = document.querySelector('#container');
-//     gridContainer.removeChild(element);
-// };
+function removeGrid (row){
+    const gridContainer = document.querySelector('#container');
+    gridContainer.removeChild(row);
+};
 
 // // add event listener to button that will prompt the user to input a number, which will define the grid dimensions.
 // button.addEventListener('click', () => {
