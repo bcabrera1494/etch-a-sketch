@@ -81,9 +81,15 @@ const container = document.querySelector('#container');
 
 container.addEventListener('mouseover', () => {
     const rowContainer = document.querySelectorAll('#row');
-    rowContainer.forEach(row => {
-        row.addEventListener('mouseover', () => {
-            row.setAttribute('style', 'background: gray')
+    rowContainer.forEach(r => {
+        r.addEventListener('mouseover', () => {
+            const cell = document.querySelectorAll('#cell');
+            cell.forEach(c => {
+                c.addEventListener('mouseover', () => {
+                    c.setAttribute('style', 'background: gray');
+                });
+
+            });
         });
     });
 });
