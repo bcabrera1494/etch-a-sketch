@@ -1,28 +1,31 @@
 const body = document.querySelector('body');
 
-// // create button that will send the user a popup asking for the number of squares per side for the new grid.
-// const button = document.createElement('button');
-// body.appendChild(button);
-// button.textContent = 'Customize your grid!';
+// create button that will send the user a popup asking for the number of squares per side for the new grid.
+const button = document.createElement('button');
+body.appendChild(button);
+button.textContent = 'Customize your grid!';
 
 // // function to make grid
-// function newGrid(userInput){
-//     // logic to remove original grid or prevent original grid from loading could go here
-//     const gridContainer = document.querySelector('#container');
+function newGrid(userInput) {
+    for (let i = 0; i < userInput; i++) {
+        const gridContainer = document.querySelector('#container');
+        const rowContainer = document.createElement('div');
+        rowContainer.setAttribute('id', 'row');
+        rowContainer.style.flex = '1 1 0';
+        gridContainer.appendChild(rowContainer);
 
-//     for (let r = 0; r < userInput; r++) {
-//         for (let c = 0; c < userInput; c++) {
-//             const gridItem = document.createElement("div");
-//             gridItem.classList.add("grid-item");
-//             //Add flex properties to grid items so that they grow and shrink to fit the square
-//             gridContainer.appendChild(gridItem);
-//         };
-//     };
-// };
-
+        for (let j = 0; j < userInput; j++) {
+            const rowCell = document.createElement('div');
+            rowCell.setAttribute('id', 'cell');
+            rowCell.style.border = 'solid 1px black';
+            rowCell.style.flex = '1 1 0';
+            rowContainer.appendChild(rowCell);
+        };
+    };
+};
 
 // // function to remove old grid
-function removeGrid (row){
+function removeGrid(row) {
     const gridContainer = document.querySelector('#container');
     gridContainer.removeChild(row);
 };
@@ -34,13 +37,14 @@ button.addEventListener('click', () => {
     rows.forEach(row => {
         removeGrid(row);
     });
-});
     let userInput = prompt('Enter the number of rows and columns for your grid');
     userInput;
     if (userInput > 100) {
         prompt('Please enter a value less than 100!');
     };
-//     newGrid(userInput);
+    newGrid(userInput);
+});
+
 //     const container = document.querySelector('#container');
 //     container.setAttribute('style', 'height: max-content', 'width: max-content');
 //     // set flex attributes to cells
