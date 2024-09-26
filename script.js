@@ -27,18 +27,19 @@ function removeGrid (row){
     gridContainer.removeChild(row);
 };
 
-// // add event listener to button that will prompt the user to input a number, which will define the grid dimensions.
-// button.addEventListener('click', () => {
-//     // remove each cell using .forEach
-//     const cells = document.querySelectorAll('.grid-item');
-//         cells.forEach(cell => {
-//         removeGrid(cell);
-//         });
-//     let userInput = prompt('Enter the number of rows and columns for your grid');
-//     userInput;
-//     if (userInput > 100) {
-//         prompt('Please enter a value less than 100!');
-//     };
+// add event listener to button that will prompt the user to input a number, which will define the grid dimensions.
+//remove each row using .forEach
+button.addEventListener('click', () => {
+    const rows = document.querySelectorAll('#row');
+    rows.forEach(row => {
+        removeGrid(row);
+    });
+});
+    let userInput = prompt('Enter the number of rows and columns for your grid');
+    userInput;
+    if (userInput > 100) {
+        prompt('Please enter a value less than 100!');
+    };
 //     newGrid(userInput);
 //     const container = document.querySelector('#container');
 //     container.setAttribute('style', 'height: max-content', 'width: max-content');
