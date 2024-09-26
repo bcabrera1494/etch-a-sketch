@@ -72,13 +72,25 @@ document.addEventListener("DOMContentLoaded", function () {
             rowContainer.appendChild(rowCell);
         };
     };
+    //code to shade cells gray goes here
 });
 
 
 // // below works to shade individual elements gray
 const container = document.querySelector('#container');
-const rowContainer = document.querySelector('#row');
 
 container.addEventListener('mouseover', () => {
-    container.setAttribute('style', 'background: gray');
+    const rowContainer = document.querySelectorAll('#row');
+    rowContainer.forEach(row => {
+        row.addEventListener('mouseover', () => {
+            row.setAttribute('style', 'background: gray')
+        });
+    });
 });
+
+// const cell = document.querySelectorAll('#cell');
+// cell.forEach(cell => {
+//     cell.addEventListener('mouseover', () => {
+//         cell.setAttribute('style', 'background: gray');
+//     });
+// });
