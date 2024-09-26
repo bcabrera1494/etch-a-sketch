@@ -43,7 +43,7 @@ button.addEventListener('click', () => {
         userInput;
         if (userInput <= 100) {
             break;
-        } else { 
+        } else {
             let rePrompt = parseInt(prompt('Enter a number less than or equal to 100.'));
             userInput = rePrompt;
         };
@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", function () {
             rowContainer.appendChild(rowCell);
         };
     };
-    // //code to shade cells gray goes here
+    //code to shade cells gray goes here
     const rowContainer = document.querySelectorAll('#row');
     rowContainer.forEach(row => {
         row.addEventListener('mouseover', (event) => {
@@ -96,5 +96,17 @@ document.addEventListener("DOMContentLoaded", function () {
                 target.setAttribute('style', 'background: black');
             };
         });
+    });
+    // code to click back to white background
+    const container = document.querySelectorAll('#row');
+    container.forEach(row => {
+        row.addEventListener('click', (event => {
+            let target = event.target
+            if (target.id = 'cell') {
+                target.setAttribute('style', 'background: white');
+                target.setAttribute('style', 'border: solid 1px black');
+            };
+        }));
+
     });
 });
