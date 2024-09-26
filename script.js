@@ -105,7 +105,8 @@ document.addEventListener("DOMContentLoaded", function () {
         row.addEventListener('mouseover', (event) => {
             let target = event.target
             if (target.id = 'cell') {
-                target.setAttribute('style', 'background: black');
+                let background = getRandomColor();
+                target.setAttribute('style', `background: ${background}`);
             };
         });
     });
