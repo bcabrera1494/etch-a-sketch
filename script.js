@@ -53,7 +53,6 @@ document.addEventListener("DOMContentLoaded", function () {
     // gridContainer.setAttribute();
     body.appendChild(gridContainer);
 
-
     // Create a 16x16 grid
     const rows = 16;
 
@@ -68,35 +67,38 @@ document.addEventListener("DOMContentLoaded", function () {
             const rowCell = document.createElement('div');
             rowCell.setAttribute('id', 'cell');
             rowCell.style.border = 'solid 1px black';
-            rowCell.style.flex = '1 1 0';
+            rowCell.style.flex = '1 1 auto';
             rowContainer.appendChild(rowCell);
         };
     };
-    //code to shade cells gray goes here
-});
-
-
-// // below works to shade individual elements gray
-const container = document.querySelector('#container');
-
-container.addEventListener('mouseover', () => {
-    const rowContainer = document.querySelectorAll('#row');
-    rowContainer.forEach(r => {
-        r.addEventListener('mouseover', () => {
-            const cell = document.querySelectorAll('#cell');
-            cell.forEach(c => {
-                c.addEventListener('mouseover', () => {
-                    c.setAttribute('style', 'background: gray');
+        // //code to shade cells gray goes here
+        const rowContainer = document.querySelectorAll('#row');
+        rowContainer.forEach(row => {
+            row.addEventListener('mouseover', (event) => {
+                let target = event.target
+                if (target.id = 'cell') {
+                 target.setAttribute('style', 'background: gray')}
                 });
-
-            });
         });
-    });
+        
+        
 });
 
-// const cell = document.querySelectorAll('#cell');
-// cell.forEach(cell => {
-//     cell.addEventListener('mouseover', () => {
-//         cell.setAttribute('style', 'background: gray');
+
+
+// // below works to shade individual elements gray, but is laggy
+// const container = document.querySelector('#container');
+
+// container.addEventListener('mouseover', () => {
+//     const rowContainer = document.querySelectorAll('#row');
+//     rowContainer.forEach(r => {
+//         r.addEventListener('mouseover', () => {
+//             const cell = document.querySelectorAll('#cell');
+//             cell.forEach(c => {
+//                 c.addEventListener('mouseover', () => {
+//                     c.setAttribute('style', 'background: black');
+//                 });
+//             });
+//         });
 //     });
 // });
