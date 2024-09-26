@@ -18,6 +18,9 @@ button {
 }
 
 div {
+    aspect-ratio: 1/1;
+}
+#container {
     margin: 0;
     padding: 10px;
     display: flex;
