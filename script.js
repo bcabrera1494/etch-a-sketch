@@ -46,6 +46,9 @@ button.addEventListener('click', () => {
         });
     let userInput = prompt('Enter the number of rows and columns for your grid');
     userInput;
+    if (userInput > 100) {
+        prompt('Please enter a value less than 100!');
+    };
     newGrid(userInput);
     const container = document.querySelector('#container');
     container.setAttribute('style', 'height: max-content', 'width: max-content');
