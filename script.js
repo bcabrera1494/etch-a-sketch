@@ -42,7 +42,18 @@ button.addEventListener('click', () => {
     if (userInput > 100) {
         prompt('Please enter a value less than 100!');
     };
+
     newGrid(userInput);
+    // //code to shade cells gray goes here
+    const rowContainer = document.querySelectorAll('#row');
+    rowContainer.forEach(row => {
+        row.addEventListener('mouseover', (event) => {
+            let target = event.target
+            if (target.id = 'cell') {
+                target.setAttribute('style', 'background: black');
+            };
+        });
+    });
 });
 
 
@@ -71,17 +82,18 @@ document.addEventListener("DOMContentLoaded", function () {
             rowContainer.appendChild(rowCell);
         };
     };
-        // //code to shade cells gray goes here
-        const rowContainer = document.querySelectorAll('#row');
-        rowContainer.forEach(row => {
-            row.addEventListener('mouseover', (event) => {
-                let target = event.target
-                if (target.id = 'cell') {
-                 target.setAttribute('style', 'background: gray')}
-                });
+    // //code to shade cells gray goes here
+    const rowContainer = document.querySelectorAll('#row');
+    rowContainer.forEach(row => {
+        row.addEventListener('mouseover', (event) => {
+            let target = event.target
+            if (target.id = 'cell') {
+                target.setAttribute('style', 'background: black');
+            };
         });
-        
-        
+    });
+
+
 });
 
 
