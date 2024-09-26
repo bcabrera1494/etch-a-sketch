@@ -37,10 +37,16 @@ button.addEventListener('click', () => {
     rows.forEach(row => {
         removeGrid(row);
     });
-    let userInput = prompt('Enter the number of rows and columns for your grid');
-    userInput;
-    if (userInput > 100) {
-        prompt('Please enter a value less than 100!');
+
+    let userInput = parseInt(prompt('Enter the number of rows and columns for your grid!'));
+    while (userInput === 0 || userInput > 100) {
+        userInput;
+        if (userInput <= 100) {
+            break;
+        } else { 
+            let rePrompt = parseInt(prompt('Enter a number less than or equal to 100.'));
+            userInput = rePrompt;
+        };
     };
 
     newGrid(userInput);
@@ -55,7 +61,6 @@ button.addEventListener('click', () => {
         });
     });
 });
-
 
 // create the original grid
 document.addEventListener("DOMContentLoaded", function () {
@@ -92,25 +97,4 @@ document.addEventListener("DOMContentLoaded", function () {
             };
         });
     });
-
-
 });
-
-
-
-// // below works to shade individual elements gray, but is laggy
-// const container = document.querySelector('#container');
-
-// container.addEventListener('mouseover', () => {
-//     const rowContainer = document.querySelectorAll('#row');
-//     rowContainer.forEach(r => {
-//         r.addEventListener('mouseover', () => {
-//             const cell = document.querySelectorAll('#cell');
-//             cell.forEach(c => {
-//                 c.addEventListener('mouseover', () => {
-//                     c.setAttribute('style', 'background: black');
-//                 });
-//             });
-//         });
-//     });
-// });
