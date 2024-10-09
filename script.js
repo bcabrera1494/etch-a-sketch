@@ -5,7 +5,7 @@ const button = document.createElement('button');
 body.appendChild(button);
 button.textContent = 'Customize your grid!';
 
-// // function to make grid
+// // function to make grid //* There's a bug that is causing the grid to overflow if you input > 17 rows/columns.
 function newGrid(userInput) {
     for (let i = 0; i < userInput; i++) {
         const gridContainer = document.querySelector('#container');
