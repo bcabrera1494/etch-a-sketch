@@ -22,11 +22,12 @@ div {
     display: flex;
 }
 #container {
-    margin: 0;
+    margin: 10px
+    ;
     padding: 10px;
     display: flex;
     flex-flow: column wrap;
-    width: 320px;
-    height: 320px;
+    width: 600;
+    height: 600px;
     border: 1px dashed #000;
 }
