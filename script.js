@@ -89,14 +89,12 @@ document.addEventListener("DOMContentLoaded", function () {
     for (let i = 0; i < rows; i++) {
         const rowContainer = document.createElement('div');
         rowContainer.setAttribute('id', 'row');
-        rowContainer.style.flex = '1 1 0';
         gridContainer.appendChild(rowContainer);
 
         for (let j = 0; j < rows; j++) {
             const rowCell = document.createElement('div');
             rowCell.setAttribute('id', 'cell');
             rowCell.style.border = 'solid 1px black';
-            rowCell.style.flex = '1 1 auto';
             rowContainer.appendChild(rowCell);
         };
     };
